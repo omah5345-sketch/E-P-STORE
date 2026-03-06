@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact</title>
+<link rel="shortcut icon" href="img/ep.png" type="image/x-icon">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#0b0b0b;
+color:white;
+}
+.back-btn{
+background:gold;
+color:black;
+border:none;
+position: absolute;
+left: 10px;
+top: 10px;
+padding:10px 20px;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+align-self: start;
+width: 100px;
+}
+
+.back-btn:hover{
+background:#d4af37;
+}
+.contact{
+padding:60px 20px;
+text-align:center;
+}
+
+.contact h1{
+color:#d4af37;
+font-size:40px;
+margin-bottom:10px;
+}
+
+.contact p{
+color:#aaa;
+margin-bottom:40px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+
+.card{
+background:#111;
+padding:25px;
+border-radius:10px;
+width:180px;
+transition:0.3s;
+border:1px solid #222;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#d4af37;
+}
+
+.card a{
+text-decoration:none;
+color:#d4af37;
+font-weight:bold;
+}
+
+.form{
+background:#111;
+width:420px;
+margin:auto;
+padding:30px;
+border-radius:10px;
+}
+
+input, textarea{
+width:400px;
+padding:10px;
+margin:10px 0;
+margin-right: 70px;
+border:none;
+border-radius:5px;
+background:#222;
+color:white;
+resize: none;
+}
+
+button{
+width:100%;
+padding:12px;
+border:none;
+background:#d4af37;
+font-weight:bold;
+cursor:pointer;
+border-radius:5px;
+}
+
+button:hover{
+background:#f0c75e;
+}
+
+</style>
+<script>
+function goBack(){
+window.history.back();
+}
+</script>
+</head>
+
+<body>
+    <header>
+        <button class="back-btn" onclick="goBack()">⬅ Back</button>
+    </header>
+
+<section class="contact">
+
+<h1>Contact Us</h1>
+<p>We are always happy to hear from you</p>
+
+<div class="cards">
+
+<div class="card">
+<a href="https://wa.me/201551270308">📱 WhatsApp</a>
+</div>
+
+<div class="card">
+<a href="https://facebook.com/EL-Russi Pods">📘 Facebook</a>
+</div>
+
+<div class="card">
+<a href="https://instagram.com/podselrussi">📸 Instagram</a>
+</div>
+
+<div class="card">
+<a href="https://tiktok.com/">🎵 TikTok</a>
+</div>
+
+</div>
+
+<div class="form">
+
+<h3 style="color:#d4af37">Send Message</h3>
+
+<input type="text" id="name" placeholder="Your Full Name">
+
+<input type="email" id="email" placeholder="Your E-mail">
+
+<textarea id="msg" placeholder="Write your message"></textarea>
+
+<button onclick="send()">Send To WhatsApp</button>
+
+</div>
+
+</section>
+
+<script>
+
+function send(){
+
+let name=document.getElementById("name").value
+let msg=document.getElementById("msg").value
+let email=document.getElementById("email").value
+
+let phone="201551270308"
+
+let url="https://wa.me/"+phone+"?text="
++"Name: "+name+"%0A"
++"Message: "+msg
++"email: "+email
+
+window.open(url)
+
+}
+
+</script>
+
+</body>
+</html>

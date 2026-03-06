@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="shortcut icon" href="img/ep.png" type="image/x-icon">
+    <style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#000,#1a1a1a,#d4af37);
+color:white;
+text-align:center;
+}
+
+/* العنوان */
+
+h1{
+margin-top:40px;
+color:gold;
+}
+
+/* صندوق الكارت */
+
+.cart-box{
+width:400px;
+margin:auto;
+background:#111;
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+/* المنتجات */
+
+.cart-item{
+display:flex;
+justify-content:space-between;
+margin:10px 0;
+padding:10px;
+border-bottom:1px solid #444;
+}
+
+/* السعر الكلي */
+
+#total{
+margin-top:20px;
+color:gold;
+}
+
+/* الازرار */
+
+button{
+width:100%;
+padding:12px;
+margin-top:15px;
+border:none;
+border-radius:20px;
+font-weight:bold;
+cursor:pointer;
+font-size:15px;
+}
+
+/* زر الواتس */
+
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+.whatsapp:hover{
+background:#1ebe5d;
+}
+
+/* زر الغاء الطلب */
+
+.cancel{
+background:red;
+color:white;
+}
+
+.cancel:hover{
+background:#cc0000;
+}
+.back-btn{
+background:gold;
+color:black;
+border:none;
+position: absolute;
+left: 10px;
+top: 10px;
+padding:10px 20px;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+align-self: start;
+width: 100px;
+}
+
+.back-btn:hover{
+background:#d4af37;
+}
+</style>
+<script>
+function goBack(){
+window.history.back();
+}
+</script>
+</head>
+<body>
+    <header>
+        <button class="back-btn" onclick="goBack()">⬅ Back</button>
+    </header>
+    <h1>Your Cart</h1>
+
+<div id="cartItems"></div>
+
+<h2 id="total"></h2>
+
+<button onclick="sendWhats()">Send Order WhatsApp</button>
+
+<button onclick="clearCart()">Cancel Order</button>
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let container = document.getElementById("cartItems");
+
+let total = 0;
+
+cart.forEach(item=>{
+
+container.innerHTML += `
+<p>${item.name} - $${item.price}</p>
+`;
+
+total += item.price;
+
+});
+
+document.getElementById("total").innerText =
+"Total Price: $" + total;
+
+
+function sendWhats(){
+
+let message = "New Order:%0A";
+
+cart.forEach(item=>{
+message += item.name + " - $" + item.price + "%0A";
+});
+
+message += "%0ATotal = $" + total;
+
+window.open(
+"https://wa.me/201551270308?text=" + message
+);
+
+}
+
+
+function clearCart(){
+
+localStorage.removeItem("cart");
+
+location.reload();
+
+}
+
+</script>
+</body>
+</html>

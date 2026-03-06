@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EP Store</title>
+<link rel="shortcut icon" href="img/ep.png" type="image/x-icon">
+
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+background:#0b0b0b;
+color:white;
+}
+.menu{
+position:relative;
+display:inline-block;
+}
+
+.menu a{
+color:gold;
+text-decoration:none;
+padding:10px;
+}
+
+.dropdown{
+display:none;
+position:absolute;
+background:#111;
+border:1px solid gold;
+min-width:150px;
+border-radius: 20px;
+}
+
+.dropdown a{
+display:block;
+padding:10px;
+color:white;
+}
+
+.dropdown a:hover{
+background:#222;
+}
+.menu:hover .dropdown{
+display:block;
+}
+
+.header{
+display:flex;
+align-items:center;
+justify-content:center;
+background:black;
+padding:15px;
+position:relative;
+}
+
+.logo{
+position:absolute;
+left:20px;
+width:98px;
+}
+
+.title{
+color:#d4af37;
+font-size:28px;
+}
+
+nav{
+background:#111;
+padding:15px;
+text-align:left;
+}
+
+nav a{
+color:#d4af37;
+margin:20px;
+text-decoration:none;
+font-size:18px;
+}
+
+nav a:hover{
+color:white;
+}
+
+.hero{
+text-align:center;
+padding:80px;
+background:#0b0b0b;
+}
+
+.hero h2{
+color:#d4af37;
+font-size:40px;
+}
+
+.hero button{
+background:#d4af37;
+color:black;
+padding:12px 25px;
+border:none;
+font-size:16px;
+cursor:pointer;
+border-radius:5px;
+}
+.intro{
+text-align:center;
+padding:80px 20px;
+background:#0b0b0b;
+color:white;
+border-bottom:1px solid gold;
+}
+
+.intro h1{
+color:gold;
+font-size:40px;
+margin-bottom:20px;
+}
+
+.intro p{
+max-width:600px;
+margin:auto;
+color:#ccc;
+font-size:18px;
+}
+
+.intro button{
+margin-top:25px;
+background:gold;
+color:black;
+border:none;
+padding:12px 30px;
+font-size:18px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.intro button:hover{
+background:#d4af37;
+}
+.products{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+padding:40px;
+}
+
+/* الكارت */
+
+.card{
+background:#111;
+border:1px solid gold;
+border-radius:10px;
+width:230px;
+text-align:center;
+padding:15px;
+transition:0.3s;
+}
+.card img{
+    margin-left: -10px;
+}
+
+/* تأثير عند المرور */
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px gold;
+}
+.card button{
+background:gold;
+border:none;
+padding:10px 25px;
+font-size:16px;
+border-radius:5px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.card button:hover{
+background:#d4af37;
+}   
+
+footer{
+text-align:center;
+padding:20px;
+background:black;
+color:#d4af37;
+}
+.cards{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+
+.card{
+background:#111;
+padding:25px;
+border-radius:10px;
+width:180px;
+transition:0.3s;
+border:1px solid #222;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#d4af37;
+}
+
+.card a{
+text-decoration:none;
+color:#d4af37;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="header">
+
+<img src="img/ep.png" class="logo">
+<h1 class="title">El-Russi Pods | EP Store</h1>
+
+</header>
+
+<nav>
+    
+    <div class="menu">
+       <a href="#">Settings ⚙️▾</a>
+            <div class="dropdown">
+                <a href="first.html">Log out 👋</a>
+            </div> 
+    </div>
+
+    <div class="menu">
+        <a href="#">Offers 🔥▾</a>
+            <div class="dropdown">
+                <a href="#">New ✨</a>
+            </div>
+    </div>    
+           
+        <a href="Shop.html">Home 🏡</a>
+        <a href="contact.html">Contact 📞</a>
+        <a href="aboutus.html">About Us 👤</a>
+        <a href="cart.html">Cart 🛒</a>
+</nav>
+
+    <div class="hero">
+        <h2>Premium Pods </h2>
+        <p>Original Pods With Fast Delivery</p>
+        <a href="Shop.html"><button>Shop Now</button></a>
+    </div>
+    <section class="intro">
+        <h1>Welcome to EP Store</h1>
+        <p style="font-size: 130%;"> Here You can buy new and used vapes and pods.</p><br>
+        <p style="font-size: 130%;">You can buy the liquid you want .</p><br>
+        <p style="font-size: 170%; color: #d4af37;">EP King of the Mood.</p>
+        
+    </section>
+    <div class="products">
+            <h1 style="text-align: center; color: #d4af37;">pods</h1>
+        <div class="card">
+            <img src="img/pixo.webp" width="200px" style="border-radius: 30%;">
+            <p>aspire Pixo Aura</p>
+            <p>1150 EGP</p>
+            <a href=""><button>More</button></a>
+        </div>
+        <div class="card">
+            <img src="img/go2.webp" width="200px" style="border-radius: 30%;">
+            <p>X Lim Go 2</p>
+            <p>450 EGP</p>
+            <a href="go2-more.html"><button>More</button></a>
+        </div>
+
+        <div class="card">
+            <img src="img/q1.webp" width="200px" style="border-radius: 30%;">
+            <p>Sonder Q 1</p>
+            <p>350 EGP</p>
+            <a href="q1-more.html"><button>More</button></a>
+        </div>
+
+        <div class="card">
+            <img src="img/sq pro2.webp" width="200px" style="border-radius: 30%;">
+            <p>X Lim SQ Pro 2</p>
+            <p>1000 EGP</p>
+            <a href=""><button>More</button></a>
+        </div>
+    </div>
+    <hr color="gold">
+    <div class="products">
+            <h1 style="text-align: center; color: #d4af37;">liquids</h1>
+        <div class="card">
+            <img src="img/Tokyo.webp" width="200px" style="border-radius: 30%;">
+            <p>Tokyo</p>
+            <p>480 EGP</p>
+        </div>
+
+        <div class="card">
+            <img src="img/xo.webp" width="200px" style="border-radius: 30%;">
+            <p>XO</p>
+            <p>230 EGP</p>
+        </div>
+
+        <div class="card">
+            <img src="img/frisky.jpg" width="200px" style="border-radius: 30%;">
+            <p>The Frisky</p>
+            <p>135 EGP</p>  
+        </div>
+
+        <div class="card">
+            <img src="img/station.jpg" width="200px" style="border-radius: 30%;">
+            <p>Vape Station</p>
+            <p>260 EGP</p>  
+        </div>
+    </div>
+    <hr color="gold">
+    <div class="products">
+            <h1 style="text-align: center; color: #d4af37;">Accessory</h1>
+        <div class="card">
+            <img src="img/1.webp" width="200px" height="200px" style="border-radius: 30%;">
+            <p>Lanyard Black</p>
+            <p>100 EGP</p>
+        </div>
+
+        <div class="card">
+            <img src="img/2.webp" width="200px" style="border-radius: 30%;">
+            <p>Lanyard Pink</p>
+            <p>100 EGP</p>
+        </div>
+    </div>
+    
+<footer class="footer">
+
+<h2>EP Pods Store</h2>
+
+<p>Premium Pods With The Best Quality</p>
+
+<div class="social">
+
+<div class="cards">
+
+<div class="card">
+<a href="https://wa.me/201551270308" target="_blank">📱 WhatsApp</a>
+</div>
+
+<div class="card">
+<a href="https://facebook.com/EL-Russi Pods" target="_blank">📘 Facebook</a>
+</div>
+
+<div class="card">
+<a href="https://instagram.com/podselrussi" target="_blank">📸 Instagram</a>
+</div>
+
+<div class="card">
+<a href="https://tiktok.com">🎵 TikTok</a>
+</div>
+
+</div>
+</div>
+
+<p class="copy">© 2026 EL-Russi Puds Pods Store</p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>XLim GO2</title>
+
+<style>
+
+body{
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+margin:0;
+}
+
+.back-btn{
+background:gold;
+color:black;
+border:none;
+position:absolute;
+left:10px;
+top:10px;
+padding:10px 20px;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+h1{
+color:gold;
+margin-top:40px;
+}
+
+/* الكونتينر اللي فيه الصورة والجدول */
+
+.product-box{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+margin-top:40px;
+flex-wrap:wrap;
+}
+
+/* الصورة */
+
+.product-img{
+border:2px solid gold;
+border-radius:10px;
+padding:10px;
+background:#111;
+}
+
+/* الجدول */
+
+table{
+border-collapse:collapse;
+width:800px;
+background:#111;
+}
+
+th, td{
+border:1px solid gold;
+padding:15px;
+}
+
+th{
+background:gold;
+color:black;
+}
+
+tr:hover{
+background:#222;
+}
+
+</style>
+
+<script>
+function goBack(){
+window.history.back();
+}
+</script>
+
+</head>
+
+<body>
+
+<button class="back-btn" onclick="goBack()">⬅ Back</button>
+
+<h1>Xlim Go 2</h1>
+
+<div class="product-box">
+
+<img src="img/go2.webp" class="product-img" width="325">
+
+<table>
+
+<tr>
+<th>Specifications</th>
+<th>Details</th>
+</tr>
+
+<tr>
+<td>Battery</td>
+<td>1500mAh</td>
+</tr>
+
+<tr>
+<td>Charging</td>
+<td>Type-C</td>
+</tr>
+
+<tr>
+<td>Airflow</td>
+<td>Adjustable</td>
+</tr>
+
+<tr>
+<td>Power</td>
+<td>5 – 30W</td>
+</tr>
+
+<tr>
+<td>Pod Capacity</td>
+<td>3ml</td>
+</tr>
+
+<tr>
+<td>Coil Resistance</td>
+<td>0.4Ω / 0.6Ω / 0.8Ω / 1.2Ω</td>
+</tr>
+
+</table>
+
+</div>
+
+</body>
+</html>

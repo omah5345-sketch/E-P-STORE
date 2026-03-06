@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Create Account</title>
+<link rel="shortcut icon" href="img/ep.png" type="image/x-icon">
+
+<style>
+
+/* الفورم */
+form{
+width:300px;
+margin-left:150px;
+}
+
+h2{
+text-align:center;
+color:gold;
+margin-left:150px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-bottom:2px solid gold;
+background:transparent;
+color:white;
+}
+
+input::placeholder{
+color:white;
+}
+
+button{
+padding:14px;
+background:gold;
+border:none;
+color:black;
+font-weight:bold;
+cursor:pointer;
+margin-top:20px;
+width:325px;
+border-radius:20px;
+}
+
+button:hover{
+background:#d4af37;
+}
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,black,#1a1a1a,#d4af37);
+}
+
+.container{
+display:flex;
+height:100vh;
+}
+
+.image-side{
+width:40%;
+}
+
+.image-side img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.form-side{
+width:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+color:white;
+}
+
+#message{
+margin-top:15px;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="image-side">
+<img src="img/ep.png" alt="register image">
+</div>
+
+<div class="form-side">
+
+<h2>Create Account</h2>
+
+<form onsubmit="registerUser(); return false;">
+
+<input type="text" id="name" placeholder="Full Name">
+<input type="email" id="email" placeholder="Email">
+<input type="password" id="password" placeholder="Password">
+<input type="password" id="confirm" placeholder="Confirm Password">
+
+<button type="submit">Sign Up</button>
+
+</form>
+
+<h3 style="margin-left: 180px;">You Alraedy Have Account?</h3>
+<a href="login.html" style="margin-left: 180px;"><button>Login</button></a>
+<p id="msg" style="margin-left: 180px;"></p>
+
+<script>
+
+function registerUser(){
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let password = document.getElementById("password").value;
+let confirm = document.getElementById("confirm").value;
+
+let msg = document.getElementById("msg");
+
+if(name=="" || email=="" || password=="" || confirm==""){
+msg.innerHTML="⚠ Please fill all fields";
+msg.style.color="red";
+return;
+}
+
+if(password!==confirm){
+msg.innerHTML="❌ Passwords do not match";
+msg.style.color="red";
+return;
+}
+
+/* حفظ البيانات */
+localStorage.setItem("userName", name);
+localStorage.setItem("userEmail", email);
+localStorage.setItem("userPassword", password);
+
+msg.innerHTML="✅ Account Created Successfully";
+msg.style.color="lime";
+
+/* الانتقال بعد ثانيتين */
+setTimeout(function(){
+window.location.href="index.html";
+},2000);
+
+}
+
+</script>
+
+</body>
+</html>

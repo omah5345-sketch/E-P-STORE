@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="shortcut icon" href="img/ep.png" type="image/x-icon">
+
+<style>
+
+form{
+width:300px;
+margin-left:150px;
+}
+
+h2{
+text-align:center;
+color:gold;
+margin-left:150px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-bottom:2px solid gold;
+background:transparent;
+color:white;
+}
+
+input::placeholder{
+color:white;
+}
+
+button{
+padding:14px;
+background:gold;
+border:none;
+color:black;
+font-weight:bold;
+cursor:pointer;
+margin-top:20px;
+width:325px;
+border-radius:20px;
+}
+
+button:hover{
+background:#d4af37;
+}
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,black,#1a1a1a,#d4af37);
+}
+
+.container{
+display:flex;
+height:100vh;
+}
+
+.image-side{
+width:40%;
+}
+
+.image-side img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.form-side{
+width:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+color:white;
+}
+
+#message{
+margin-top:15px;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="image-side">
+<img src="img/ep.png" alt="login image">
+</div>
+
+<div class="form-side">
+
+<h2>Login</h2>
+
+<form onsubmit="return loginUser()">
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="password" id="password" placeholder="Password">
+
+<button type="submit">Login</button>
+
+</form>
+
+<h3 style="margin-left:180px;">You Don't Have Account?</h3>
+
+<a href="first.html">
+<button style="margin-left:180px;">Sign Up</button>
+</a>
+
+<p id="message" style="margin-left: 180px;"></p>
+
+</div>
+
+</div>
+
+<script>
+
+function loginUser(){
+
+let email=document.getElementById("email").value;
+let pass=document.getElementById("password").value;
+let message=document.getElementById("message");
+
+/* التحقق من الحقول */
+
+if(email=="" || pass==""){
+message.innerHTML="⚠ Please fill all fields";
+message.style.color="red";
+return false;
+}
+
+/* جلب البيانات من LocalStorage */
+
+let savedEmail=localStorage.getItem("userEmail");
+let savedPass=localStorage.getItem("userPassword");
+
+/* التحقق من البيانات */
+
+if(email===savedEmail && pass===savedPass){
+
+message.innerHTML="✅ Login Successful";
+message.style.color="lime";
+
+/* دخول الموقع */
+
+setTimeout(function(){
+window.location.href="index.html";
+},1500);
+
+}else{
+
+message.innerHTML="❌ Email or Password incorrect";
+message.style.color="red";
+
+}
+
+return false;
+
+}
+
+</script>
+
+</body>
+</html>

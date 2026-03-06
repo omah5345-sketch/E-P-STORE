@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<link rel="shortcut icon" href="img/ep.png" type="image/x-icon">
+
+<style>
+
+body{
+background:black;
+font-family:Arial;
+margin:0;
+color:white;
+}
+
+.back-btn{
+background:gold;
+color:black;
+border:none;
+top: 10px;
+padding:10px 20px;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.back-btn:hover{
+background:#d4af37;
+}
+
+/* الهيدر */
+
+header{
+background:black;
+color:gold;
+padding:20px;
+font-size:28px;
+border-bottom:1px solid gold;
+}
+
+/* شبكة المنتجات */
+
+.products{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+padding:40px;
+}
+
+/* الكارت */
+
+.card{
+background:#111;
+border:1px solid gold;
+border-radius:10px;
+width:230px;
+text-align:center;
+padding:15px;
+transition:0.3s;
+}
+
+/* تأثير عند المرور */
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px gold;
+}
+
+/* الصورة */
+
+.card img{
+width:200px;
+border-radius:8px;
+}
+
+/* النص */
+
+.card p{
+margin:10px 0;
+color:#ddd;
+}
+
+/* زر الشراء */
+
+.card button{
+background:gold;
+border:none;
+padding:10px 25px;
+font-size:16px;
+border-radius:5px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.card button:hover{
+background:#d4af37;
+}
+.more-btn{
+background: gold;
+color: black;
+padding: 10px 20px;
+text-decoration: none;
+font-weight: bold;
+border-radius: 6px;
+}
+
+.more-btn:hover{
+background: black;
+color: gold;
+border: 1px solid gold;
+}
+
+</style>
+<script>
+function goBack(){
+window.history.back();
+}
+</script>
+</head>
+
+<body>
+
+<header>
+<button class="back-btn" onclick="goBack()">⬅ Back</button>
+</header>
+<h1 style="color: #d4af37; text-align: center;">Pods</h1>
+<div class="products">
+
+    <div class="card">
+        <img src="img/go2.webp">
+        <p>X Lim Go 2</p>
+        <p>450 EGP</p>
+        <button onclick="addToCart('Xlim Go 2',450 )">Buy</button>
+        <a href="go2-more.html"><button>More</button></a>
+    </div>
+
+    <div class="card">
+        <img src="img/q1.webp">
+        <p>Sonder Q 1</p>
+        <p>350 EGP</p>
+        <button onclick="addToCart('Sonder Q 1',350)">Buy</button>
+        <a href="q1-more.html"><button>More</button></a>
+    </div>
+
+    <div class="card">
+        <img src="img/sq pro2.webp">
+        <p>X Lim SQ Pro 2</p>
+        <p>1000 EGP</p>
+        <button onclick="addToCart('Xlim SQ Pro 2',1000)">Buy</button>
+        <button>More</button>
+    </div>
+
+    <div class="card">
+        <img src="img/pixo.webp">
+        <p>aspire Pixo Aura</p>
+        <p>1150 EGB</p>
+        <button onclick="addToCart('aspire Pixo Aura',1150)">Buy</button>
+        <button>More</button>
+    </div>
+
+    <div class="card">
+        <img src="img/nex.webp">
+        <p>Nexlim Go</p>
+        <p>750 EGB</p>
+        <button onclick="addToCart('Nexlim Go',750)">Buy</button>
+        <button>More</button>
+    </div>
+
+    <div class="card">
+        <img src="img/go.webp">
+        <p>Xlim Go</p>
+        <p>550 EGB</p>
+        <button onclick="addToCart('Xlim Go',550)">Buy</button>
+        <button>More</button>
+    </div>
+
+    <div class="card">
+        <img src="img/pro.webp" height="235px">
+        <p>Xlim Pro</p>
+        <p>1100 EGB</p>
+        <button onclick="addToCart('Xlim Pro',1100)">Buy</button>
+        <button>More</button>
+    </div>
+
+    <div class="card">
+        <img src="img/pro 2.webp" height="235px">
+        <p>Xlim Pro 2</p>
+        <p>1500 EGB</p>
+        <button onclick="addToCart('Xlim Pro 2',1500)">Buy</button>
+        <button>More</button>
+    </div>
+
+    <div class="card">
+        <img src="img/pro 3.webp" height="235px">
+        <p>Xlim Pro 3</p>
+        <p>1550 EGB</p>
+        <button onclick="addToCart('Xlim Pro 3',1550)">Buy</button>
+        <button>More</button>
+    </div>
+
+    <div class="card">
+        <img src="img/sq pro.webp" height="235px">
+        <p>Xlim SQ Pro</p>
+        <p>900 EGB</p>
+        <button onclick="addToCart('Xlim SQ Pro',900)">Buy</button>
+        <button>More</button>
+    </div>
+</div>
+
+<hr color="gold">
+<h1 style="color: #d4af37; text-align: center;">Liquids</h1>
+
+
+<div class="products">
+
+    <div class="card">
+        <img src="img/frisky.jpg">
+        <p>The Frisky</p>
+        <p>135 EGP</p>
+        <button onclick="addToCart('The Frisky',135)">Buy</button>
+    </div>
+
+    <div class="card">
+        <img src="img/station.jpg">
+        <p>Vape Station</p>
+        <p>260 EGP</p>
+        <button onclick="addToCart('Vape Station',260)">Buy</button>
+    </div>
+
+    <div class="card">
+        <img src="img/xo.webp">
+        <p>XO</p>
+        <p>230 EGP</p>
+        <button onclick="addToCart('XO',230)">Buy</button>
+    </div>
+
+    <div class="card">
+        <img src="img/Tokyo.webp">
+        <p>Tokyo (suggested)</p>
+        <p>480 EGP</p>
+        <button onclick="addToCart('Tokyo',480)">Buy</button>
+    </div>
+
+</div>
+
+<hr color="gold">
+
+<div class="products">
+
+    <div class="card">
+        <img src="img/1.webp">
+        <p>Lanyard Black & Red</p>
+        <p>50 EGP</p>
+        <button onclick="addToCart('Lanyard',50)">Buy</button>
+    </div>
+
+    <div class="card">
+        <img src="img/2.webp" height="270px">
+        <p>Lanyard Pink & Blue</p>
+        <p>60 EGP</p>
+        <button onclick="addToCart('Lanyard',60)">Buy</button>
+    </div>
+
+</div>
+<script>
+    function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+cart.push({
+name:name,
+price:price
+});
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+alert("Product Added To Cart");
+
+}
+</script>
+</body>
+</html>

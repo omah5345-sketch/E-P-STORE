@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Us</title>
+<link rel="shortcut icon" href="img/ep.png" type="image/x-icon">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:black;
+color:white;
+}
+.back-btn{
+background:gold;
+color:black;
+border:none;
+position: absolute;
+left: 10px;
+top: 10px;
+padding:10px 20px;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+align-self: start;
+width: 100px;
+}
+
+.back-btn:hover{
+background:#d4af37;
+}
+
+.about{
+text-align:center;
+padding:60px 20px;
+}
+
+.about h1{
+color:gold;
+font-size:40px;
+margin-bottom:20px;
+}
+
+.about p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+color:#ccc;
+}
+
+.features{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:50px;
+flex-wrap:wrap;
+}
+
+.card{
+background:#111;
+padding:25px;
+width:200px;
+border-radius:10px;
+border:1px solid #222;
+transition:0.3s;
+}
+
+.card:hover{
+border-color:gold;
+transform:translateY(-5px);
+}
+
+.card h3{
+color:gold;
+margin-bottom:10px;
+}
+
+</style>
+<script>
+function goBack(){
+window.history.back();
+}
+</script>
+</head>
+
+<body>
+    <header>
+        <button class="back-btn" onclick="goBack()">⬅ Back</button>
+    </header>
+
+
+<section class="about">
+<hr color="gold">
+<h1>About EP Store</h1>
+
+<p>
+Welcome to EP Store. We specialize in providing high-quality pod devices and vape products. 
+Our goal is to offer original products, great prices, and fast delivery for all our customers.
+</p>
+
+<p>
+We always aim to provide the best shopping experience with trusted products and excellent customer service.
+</p>
+
+<div class="features">
+
+<div class="card">
+<h3>⭐ Quality</h3>
+<p>100% original products</p>
+</div>
+
+<div class="card">
+<h3>🚚 Fast Delivery</h3>
+<p>Quick shipping service</p>
+</div>
+
+<div class="card">
+<h3>💰 Best Price</h3>
+<p>Competitive prices</p>
+</div>
+
+<div class="card">
+<h3>🤝 Support</h3>
+<p>Friendly customer service</p>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
